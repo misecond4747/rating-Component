@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <div class="card">
+      <div class="imgContainer">
+        <img src="./images/icon-star.svg" alt="Star Icon" />
+      </div>
+      <div class="info">
+        <h2 class="heading">How did we do?</h2>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+      </div>
+      <ul class="numbers">
+        <li class="number">1</li>
+        <li class="number">2</li>
+        <li class="number">3</li>
+        <li class="number">4</li>
+        <li class="number">5</li>
+      </ul>
+      <button type="button" class="btnSubmit" onclick="Submit()">Submit</button>
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="wrapper">
+      <div class="thanksCard">
+        <img src="./images/illustration-thank-you.svg" alt="Thank you Image" />
+        <h4 class="marking">
+          You selected <span class="givenRating"></span> out of 5
+        </h4>
+        <h2>Thank you!</h2>
+        <p>
+          out of 5 Thank you! We appreciate you taking the time to give a
+          rating. If you ever need more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+
+    <!-- Add rating here -->
+
+    <!-- Thank you state end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ibrahim</a>.
+    </div>
+    <script>
+      const numbers = document.querySelectorAll(".number");
+      const givenRating = document.querySelector(".givenRating");
+      const wrapper = document.querySelector(".wrapper");
+
+      let rating;
+
+      numbers.forEach((number) => {
+        number.addEventListener("click", () => {
+          numbers.forEach((number) => {
+            number.classList.remove("active");
+          });
+          number.classList.add("active");
+          rating = number.innerHTML;
+          givenRating.innerHTML = rating;
+          console.log("rating:", rating);
+          console.log("givenRating:", givenRating);
+        });
+      });
+
+      let Submit = () => {
+        numbers.forEach((number) => {
+          if (number.classList.contains("active")) {
+            wrapper.classList.add("show");
+          } else {
+            return false;
+          }
+        });
+      };
+    </script>
+  </body>
+</html>

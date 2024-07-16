@@ -1,0 +1,169 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+:root {
+  /* ### Primary */
+
+  --Orange: hsl(25, 97%, 53%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--Very-Dark-Blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  position: relative;
+}
+
+.card {
+  height: 400px;
+  width: 370px;
+  border-radius: 30px;
+  background-color: var(--Dark-Blue);
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.heading {
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 15px;
+  color: var(--Light-Grey);
+}
+
+.imgContainer {
+  height: 40px;
+  width: 40px;
+  background-color: var(--Light-Grey);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer img {
+  width: 20px;
+}
+
+.numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.number {
+  height: 50px;
+  width: 50px;
+  font-size: medium;
+  border-radius: 9999px;
+  background-color: var(--Light-Grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.active {
+  background-color: var(--White);
+  color: var(--Dark-Blue);
+}
+
+.number:hover {
+  background-color: var(--Orange);
+  color: var(--Dark-Blue);
+}
+
+.btnSubmit {
+  padding-block: 0.6rem;
+  border-radius: 50px;
+  background-color: var(--Orange);
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+  color: var(--Dark-Blue);
+  cursor: pointer;
+}
+
+.btnSubmit:hover {
+  background-color: var(--White);
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.thanksCard {
+  height: 400px;
+  width: 370px;
+  border-radius: 30px;
+  background-color: var(--Dark-Blue);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.thanksCard h2 {
+  margin-top: 0.6rem;
+  margin-bottom: -0.6rem;
+}
+
+.thanksCard img {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.marking {
+  background-color: rgba(255, 255, 255, 0.137);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0.5rem 0.7rem;
+  border-radius: 12px;
+  color: var(--Orange);
+}
+
+.thanksCard p {
+  color: var(--Light-Grey);
+}
+
+.show {
+  display: flex;
+}
