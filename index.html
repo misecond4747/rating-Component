@@ -37,38 +37,44 @@
   </head>
   <body>
     <!-- Rating state start -->
-    <div class="card">
-      <div class="imgContainer">
+    <div class="card" role="banner">
+      <div class="imgContainer" role="container">
         <img src="./images/icon-star.svg" alt="Star Icon" />
       </div>
-      <div class="info">
-        <h2 class="heading">How did we do?</h2>
-        <p>
+      <div class="info" role="doc-introduction">
+        <h1 class="heading" role="heading">How did we do?</h1>
+        <p role="contentinfo">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
       </div>
-      <ul class="numbers">
+      <ul class="numbers" role="option">
         <li class="number">1</li>
         <li class="number">2</li>
         <li class="number">3</li>
         <li class="number">4</li>
         <li class="number">5</li>
       </ul>
-      <button type="button" class="btnSubmit" onclick="Submit()">Submit</button>
+      <button type="button" class="btnSubmit" onclick="Submit()" role="button">
+        Submit
+      </button>
     </div>
 
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <div class="wrapper">
+    <div class="wrapper" role="none">
       <div class="thanksCard">
-        <img src="./images/illustration-thank-you.svg" alt="Thank you Image" />
-        <h4 class="marking">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="Thank you Image"
+          role="img"
+        />
+        <h4 class="marking" role="heading">
           You selected <span class="givenRating"></span> out of 5
         </h4>
-        <h2>Thank you!</h2>
-        <p>
+        <h2 role="heading">Thank you!</h2>
+        <p role="text">
           out of 5 Thank you! We appreciate you taking the time to give a
           rating. If you ever need more support, don’t hesitate to get in touch!
         </p>
@@ -79,7 +85,7 @@
 
     <!-- Thank you state end -->
 
-    <div class="attribution">
+    <div class="attribution" role="complementary">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
@@ -87,7 +93,7 @@
       <a href="https://github.com/misecond4747/rating-Component.git">Ibrahim</a
       >.
     </div>
-    <script>
+    <script role="application">
       const numbers = document.querySelectorAll(".number");
       const givenRating = document.querySelector(".givenRating");
       const wrapper = document.querySelector(".wrapper");

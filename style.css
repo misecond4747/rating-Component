@@ -24,7 +24,7 @@ img {
 
 body {
   height: 100vh;
-  background-color: var(--Very-Dark-Blue);
+  background-color: black;
   color: white;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@ body {
   height: 400px;
   width: 370px;
   border-radius: 30px;
-  background-color: var(--Dark-Blue);
+  background-color: var(--Very-Dark-Blue);
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -59,7 +59,7 @@ body {
 .imgContainer {
   height: 40px;
   width: 40px;
-  background-color: var(--Light-Grey);
+  background-color: var(--Dark-Blue);
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@ body {
   width: 50px;
   font-size: medium;
   border-radius: 9999px;
-  background-color: var(--Light-Grey);
+  background-color: var(--Dark-Blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +121,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--Very-Dark-Blue);
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,7 +132,7 @@ body {
   height: 400px;
   width: 370px;
   border-radius: 30px;
-  background-color: var(--Dark-Blue);
+  background-color: var(--Very-Dark-Blue);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -152,7 +152,7 @@ body {
 }
 
 .marking {
-  background-color: rgba(255, 255, 255, 0.137);
+  background-color: var(--Dark-Blue);
   font-size: 14px;
   font-weight: 400;
   padding: 0.5rem 0.7rem;
